@@ -1,11 +1,10 @@
 import java.awt.Color;
-import java.awt.event.ActionEvent;
 
 public aspect funAdd {
 	
 	
-	pointcut funciojn(Color c) : call(void changeColor(Color c)) && args(c);
-    after(Color c) returning : funciojn(Color c) {
+	pointcut funciojn(Color c) : execution (void changeColor(Color)) && args(c);
+    after(Color c) returning : funciojn(c) {
 			System.out.println("Nuevo color de fondo: " + c.toString());
 		}
 	

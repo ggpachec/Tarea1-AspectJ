@@ -68,11 +68,11 @@ public class Jframe extends JFrame implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) {
         if (e.getSource() == b_rojo) {
-        	changeColor(new Color(255,0,0));
+        	changeColor(Color.red);
         } else if (e.getSource() == b_green) {
-        	changeColor(new Color(0,255,0));
+        	changeColor(Color.green);
         } else if (e.getSource() == b_blue) {
-        	changeColor(new Color(0,0,255));
+        	changeColor(Color.blue);
         }
     }
 }
