@@ -1,3 +1,4 @@
+package tarea1;
 
 import java.awt.Color;
 import java.util.ArrayList;
