@@ -9,10 +9,13 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Jframe extends JFrame {
+public class Jframe extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private JButton b_rojo;
+	private JButton b_green;
+	private JButton b_blue;
 
 	/**
 	 * Launch the application.
@@ -42,30 +45,18 @@ public class Jframe extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton b_rojo = new JButton("Rojo");
-		b_rojo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				changeColor(new Color(255,0,0));
-			}
-		});
+		b_rojo = new JButton("Rojo");
+		b_rojo.addActionListener(this);
 		b_rojo.setBounds(131, 48, 117, 29);
 		contentPane.add(b_rojo);
 		
-		JButton b_green = new JButton("Verde");
-		b_green.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				changeColor(new Color(0,255,0));
-			}
-		});
+		b_green = new JButton("Verde");
+		b_green.addActionListener(this);
 		b_green.setBounds(131, 114, 117, 29);
 		contentPane.add(b_green);
 		
-		JButton b_blue = new JButton("Azul");
-		b_blue.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				changeColor(new Color(0,0,255));
-			}
-		});
+		b_blue = new JButton("Azul");
+		b_blue.addActionListener(this);
 		b_blue.setBounds(131, 180, 117, 29);
 		contentPane.add(b_blue);
 	}
@@ -74,4 +65,14 @@ public class Jframe extends JFrame {
 		 contentPane.setBackground(c);
 		
 	}
+	
+	public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == b_rojo) {
+        	changeColor(new Color(255,0,0));
+        } else if (e.getSource() == b_green) {
+        	changeColor(new Color(0,255,0));
+        } else if (e.getSource() == b_blue) {
+        	changeColor(new Color(0,0,255));
+        }
+    }
 }
