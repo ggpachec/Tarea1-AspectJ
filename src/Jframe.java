@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Jframe extends JFrame implements ActionListener{
+public class Jframe extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -46,17 +46,32 @@ public class Jframe extends JFrame implements ActionListener{
 		contentPane.setLayout(null);
 		
 		b_rojo = new JButton("Rojo");
-		b_rojo.addActionListener(this);
+		b_rojo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	changeColor(Color.red);
+            }
+        });
 		b_rojo.setBounds(131, 48, 117, 29);
 		contentPane.add(b_rojo);
 		
 		b_green = new JButton("Verde");
-		b_green.addActionListener(this);
+		b_green.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	changeColor(Color.green);
+            }
+        });
 		b_green.setBounds(131, 114, 117, 29);
 		contentPane.add(b_green);
 		
 		b_blue = new JButton("Azul");
-		b_blue.addActionListener(this);
+		b_blue.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	changeColor(Color.blue);
+            }
+        });
 		b_blue.setBounds(131, 180, 117, 29);
 		contentPane.add(b_blue);
 	}
@@ -65,7 +80,7 @@ public class Jframe extends JFrame implements ActionListener{
 		 contentPane.setBackground(c);
 		
 	}
-	
+	/*
 	public void actionPerformed(ActionEvent e) {
         if (e.getSource() == b_rojo) {
         	changeColor(Color.red);
@@ -74,5 +89,5 @@ public class Jframe extends JFrame implements ActionListener{
         } else if (e.getSource() == b_blue) {
         	changeColor(Color.blue);
         }
-    }
+    }*/
 }
