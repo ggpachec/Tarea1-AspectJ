@@ -1,5 +1,8 @@
 # Tarea1-AspectJ
 
+En este proyecto se va a Observar al JPanel, debido a que este va a cambiar su color de fondo, y va a notificar por mensaje de consola de digo color en RGB. 
+
+
 En este ejemplo, se crea una clase "Jframe" en donde contiene 3 botones y cada uno cambia el color correspondiente del JPanel.
 
 
