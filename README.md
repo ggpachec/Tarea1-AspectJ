@@ -12,4 +12,4 @@ Cada boton tiene una ActionListener para capturar los eventos al dar clic.
 Esta implementación muestra la separación de preocupaciones (core y cross-cutting concerns) al tener una clase JFrame que se encarga de la lógica principal de la ventana y un ActionListener separado que se encarga de manejar los eventos de clic de los botones. Esto permite mantener un código más organizado y modular.
 Además, se implemento un AspectJ "FunAdd" el cual imprime el codigo en rgb del color que se esta cambiando en el JPanel.
 
-Adicionalmente hay una clase y un aspecto denominado UndoColorChange que permite que se pueda deshacer el cambio de color realizado. 
+Adicionalmente hay una clase y un aspecto denominado UndoColorChangeAspect que permite que se pueda deshacer el cambio de color realizado. 
